@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  dockerized-react-pokeapi:
+    restart: always
+    image: dockerized-react-pokeapi
+    ports:
+      - "3000:3000"
+    container_name: dockerized-react-pokeapi

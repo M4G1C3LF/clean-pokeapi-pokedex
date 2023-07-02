@@ -1,0 +1,24 @@
+.sidebar-item {
+  text-align: left;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.sidebar-item:hover {
+  background-color: #f5f5f5;
+}
+
+
+.sidebar-item > span:first-child {
+  display: inline-block;
+  width: 2rem;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.sidebar-item > span:nth-child(2) {
+  display: inline-block;
+  width: 10rem;
+  text-align: left;
+  margin-left: 0.5rem;
+}
