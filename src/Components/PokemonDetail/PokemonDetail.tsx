@@ -48,10 +48,6 @@ const PokemonDetail = (props: PokemonDetailProps) => {
                 </Col>
             </Row>
         </Container>
-        
-        
-        
-        
     </div>;
 };
 

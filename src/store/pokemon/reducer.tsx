@@ -45,6 +45,7 @@ const pokemon = (state = INIT_STATE, action : any) => {
         isLoadingPokemonList: true,
         pokemonListError: null,
       };
+      
     case GET_POKEMON_LIST_SUCCESS:
       return {
         ...state,

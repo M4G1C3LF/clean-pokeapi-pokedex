@@ -19,5 +19,4 @@ export const getListLimit = (generation : number) => {
         default:
             throw new Error("Generation must be between 1 and 8");
     }
-    return 0;
 }
