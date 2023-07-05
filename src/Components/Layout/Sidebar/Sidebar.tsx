@@ -12,8 +12,7 @@ type SidebarProps = {
 };
 
 export default (props: SidebarProps) => {
-
-    if (!props.pokemonList)
+    if (!props.pokemonList || props.pokemonList.length === 0)
         return <div className="layout-sidebar">There's no items on list</div>;
 
     return <div className="layout-sidebar">
