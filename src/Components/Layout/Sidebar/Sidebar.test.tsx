@@ -24,19 +24,16 @@ test(TEST_1_DESCRIPTION, () => {
             name: "Squritle"
         }
     ]
+    const expectedValues = [ "Bulbasaur", "Charmander", "Squritle"];
 
     //when
     render(<Sidebar pokemonList={pokemonList} getPokemonById={ () => console.log("getPokemonById") }/>);
 
     //then
-    const expectedValues = [
-        screen.getByText("Bulbasaur"),
-        screen.getByText("Charmander"),
-        screen.getByText("Squritle")
-    ]
 
     for (let expectedValue of expectedValues) {
-        expect(expectedValue).toBeInTheDocument();
+        const retrievedValue = screen.getByText(expectedValue);
+        expect(retrievedValue).toBeInTheDocument();
     }
 });
 

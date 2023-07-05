@@ -3,8 +3,8 @@ import './SidebarItem.css';
 import { PokemonMinified } from "../../../../api/aggregates/pokemon/shared/types/PokemonMinified";
 
 type SidebarItemProps = {
-    pokemon: PokemonMinified;
-    getPokemonById: Function;
+    pokemon: PokemonMinified | undefined;
+    getPokemonById: Function |  undefined;
 };
 const SidebarItem = (props: SidebarItemProps) => {
     if (!props.pokemon){
@@ -12,7 +12,7 @@ const SidebarItem = (props: SidebarItemProps) => {
             Item not defined.
         </div>;
     }
-    return <div className="sidebar-item" onClick={() => props.getPokemonById({ id: props.pokemon.id })}>
+    return <div className="sidebar-item" onClick={() => props.getPokemonById && props.getPokemonById({ id: props.pokemon?.id })}>
         <span>{props.pokemon.id}</span> <span>{props.pokemon.name}</span>
     </div>;
 };
