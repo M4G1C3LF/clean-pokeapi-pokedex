@@ -6,10 +6,6 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ApplicationInstaller from './api/pokeapi/installer/ApplicationInstaller';
-
-const pokeapi = new ApplicationInstaller();
-const pokemonController = pokeapi.getController();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,7 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App pokemonController={pokemonController}/>
+      <App />
     </Provider>
   </React.StrictMode>
 );
